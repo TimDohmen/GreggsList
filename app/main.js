@@ -1,10 +1,12 @@
-import ValuesController from "./Controllers/ValuesController.js";
+import CarController from "./Controllers/CarController.js";
+import HouseController from "./Controllers/HouseController.js";
 
 
 class App {
     constructor() {
         this.controllers = {
-            valuesController: new ValuesController()
+            carCtrl: new CarController(),
+            houseCtrl: new HouseController()
         }
     }
 }
