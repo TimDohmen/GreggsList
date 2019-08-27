@@ -1,4 +1,5 @@
 import House from "../Models/House.js";
+import Car from "../Models/Car.js";
 
 let _state = {
   homes: []
@@ -18,6 +19,14 @@ function _setState(propName, data) {
 }
 
 export default class HouseService {
+  bid(id) {
+    let house = _state.homes.find(h => h._id == id)
+    house.price++
+    _houseApi.put(id, { price: house.price })
+      .then(res => {
+        _setState('homes', _state.homes)
+      })
+  }
   deleteHome(id) {
     _houseApi.delete(id)
       .then(res => {

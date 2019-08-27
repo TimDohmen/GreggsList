@@ -39,6 +39,8 @@ export default class HouseController {
       _houseService.deleteHome(id)
     }
   }
-
+  bid(id) {
+    _houseService.bid(id)
+  }
 
 }
